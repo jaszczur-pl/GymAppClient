@@ -1,0 +1,20 @@
+<div class="form-group row" style="width: 500px;">
+    <label class="col-sm-2 col-form-label" style="color: white;">Nazwa zajęć</label>
+    <div class="col-sm-10" style="padding-bottom: 20px; padding-left: 60px;">
+        <input type="text" class="form-control" [(ngModel)]="Name"
+        placeholder="Wprowadź nazwę">
+    </div>
+    <label class="col-sm-2 col-form-label" style="color: white;">Limit użytkowników</label>
+    <div class="col-sm-10" style="padding-bottom: 10px; padding-left: 60px;">
+        <input type="number" class="form-control" [(ngModel)]="UsersLimit"
+        placeholder="Wprowadź limit">
+    </div>
+</div>
+
+<button (click)="addClass()" *ngIf="classes.ID==0" class="btn btn-success">
+    Dodaj
+</button>
+
+<button (click)="updateClass()" *ngIf="classes.ID!=0" class="btn btn-success">
+    Aktualizuj
+</button>

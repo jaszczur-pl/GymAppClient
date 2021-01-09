@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <form class="form-container" #f = "ngForm" (ngSubmit)="updateProfile()"> 
+             <h2 style="color: whitesmoke;">Profil</h2>   
+                <div class="row" style="padding-top: 20px;">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" class="form-control" name="name" value="{{Name}}" [(ngModel)]="Name">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" class="form-control" name="surname" value="{{Surname}}" [(ngModel)]="Surname">
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" value="{{Email}}" readonly>
+                </div>
+                <!-- Material switch -->
+                <div>
+                    <mat-slide-toggle [(ngModel)]="isChecked" name="isChecked" ></mat-slide-toggle>
+                    <a style="color: white;">  Uwierzytelnienie dwuskładnikowe</a>
+                </div>
+                <div style="padding-top: 20px;"><button mat-raised-button color="accent">Zatwierdź zmiany</button></div>
+            </form>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+</div>
+

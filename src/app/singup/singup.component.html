@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <form class="form-container" #f = "ngForm" (ngSubmit) = "register(f.value)">
+             <h2 style="color: whitesmoke;">Rejestracja</h2>   
+                <div class="row" style="padding-top: 20px;">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" class="form-control" name="name" placeholder="Imię" ngModel>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <input type="text" class="form-control" name="surname" placeholder="Nazwisko" ngModel>
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="E-mail" ngModel>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Nowe hasło" ngModel>
+                </div>
+                <div class="form-group" style="padding-bottom: 20px;">
+                    <input type="password" class="form-control" name="confirmPassword" placeholder="Potwierdź hasło" ngModel>
+                </div>
+                <button class="btn btn-success btn-block" type="submit">Zarejestruj</button>
+            </form>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+</div>
+

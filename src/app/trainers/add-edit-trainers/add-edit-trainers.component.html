@@ -1,0 +1,20 @@
+<div class="form-group row" style="width: 500px;">
+    <label class="col-sm-2 col-form-label" style="color: white;">Imię</label>
+    <div class="col-sm-10" style="padding-bottom: 20px">
+        <input type="text" class="form-control" [(ngModel)]="Name"
+        placeholder="Wprowadź imię">
+    </div>
+    <label class="col-sm-2 col-form-label" style="color: white;">Nazwisko</label>
+    <div class="col-sm-10" style="padding-bottom: 10px">
+        <input type="text" class="form-control" [(ngModel)]="Surname"
+        placeholder="Wprowadź nazwisko">
+    </div>
+</div>
+
+<button (click)="addTrainer()" *ngIf="trainers.ID==0" class="btn btn-success">
+    Dodaj
+</button>
+
+<button (click)="updateTrainer()" *ngIf="trainers.ID!=0" class="btn btn-success">
+    Aktualizuj
+</button>
