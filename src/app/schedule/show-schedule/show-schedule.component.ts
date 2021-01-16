@@ -14,14 +14,27 @@ export class ShowScheduleComponent implements OnInit {
 
   ModalTitle!:string;
   AcitvateAddEditScheduleComp:boolean=false;
-  schedule:any;
+  schedules:any;
 
   ngOnInit(): void {
     this.refreshScheduleList();
   }
 
+  addClick(){
+    this.schedules={
+      ID:0,
+      ClassID:0,
+      TrainerID:0,
+      DateFrom:'',
+      DateTo:'',
+      NumberOfAvailablePlaces:0
+    }
+    this.ModalTitle="Dodaj zajęcia";
+    this.AcitvateAddEditScheduleComp=true;
+  }
+
   editClick(item:any){
-    this.schedule=item;
+    this.schedules=item;
     this.ModalTitle="Edytuj terminarz";
     this.AcitvateAddEditScheduleComp=true;
   }
@@ -29,7 +42,7 @@ export class ShowScheduleComponent implements OnInit {
   deleteClick(item:any){
     if(confirm('Czy jesteś pewien?')){
       this.service.deleteSchedule(item.ID).subscribe(data=>{
-        alert(data.toString());
+        alert('Pomyślnie usunięto zajęcia');
         this.refreshScheduleList();
       })
     }

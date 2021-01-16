@@ -1,0 +1,13 @@
+.custom-event-editor .e-textlabel {
+    padding-right: 15px;
+    text-align: right;
+}
+
+#_dialog_wrapper > div.e-footer-content > button.e-control.e-btn.e-lib.e-event-delete.e-hide {
+    display: none;
+  }
+
+  .custom-event-editor td {
+    padding: 7px;
+    padding-right: 16px;
+  }

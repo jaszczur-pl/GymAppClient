@@ -21,6 +21,9 @@
         <li class="nav-item active" *ngIf="showAdminBoard">
           <a class="nav-link" href="schedule">Terminarz</a>
         </li>
+        <li class="nav-item active" *ngIf="showAdminBoard">
+          <a class="nav-link" href="reservations">Rezerwacje</a>
+        </li>
       </ul>
       <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="login" *ngIf="!isLoggedIn">Zaloguj się</a>
       <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">

@@ -39,7 +39,7 @@ export class ShowClassesComponent implements OnInit {
   deleteClick(item:any){
     if(confirm('Czy jesteś pewien?')){
       this.service.deleteClass(item.ID).subscribe(data=>{
-        alert(data.toString());
+        alert('Pomyślnie usunięto zajęcia');
         this.refreshClassesList();
       })
     }

@@ -27,7 +27,7 @@ export class AddEditTrainersComponent implements OnInit {
                Surname:this.Surname};
 
     this.service.addTrainer(val).subscribe(res=>
-      {alert(res.toString());});
+      {alert('Pomyślnie dodano trenera');});
   }
 
   updateTrainer(){
@@ -36,6 +36,6 @@ export class AddEditTrainersComponent implements OnInit {
     Surname:this.Surname};
 
     this.service.updateTrainer(val.ID, val).subscribe(res=>
-      {alert(res.toString());});
+      {alert('Pomyślnie zaktualizowano dane trenera');});
   }
 }

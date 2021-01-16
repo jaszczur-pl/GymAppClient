@@ -32,7 +32,7 @@ export class AddEditCustomerComponent implements OnInit {
     Password:this.customers.Password};
 
     this.service.updateCustomer(val.ID, val).subscribe(res=>
-      {alert(res.toString());});
+      {alert("Zaktualizowano pomyślnie dane klienta");});
   }
 
 }

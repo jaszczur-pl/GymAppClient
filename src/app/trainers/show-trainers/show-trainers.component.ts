@@ -39,7 +39,7 @@ export class ShowTrainersComponent implements OnInit {
   deleteClick(item:any){
     if(confirm('Czy jesteś pewien?')){
       this.service.deleteTrainer(item.ID).subscribe(data=>{
-        alert(data.toString());
+        alert('Pomyślnie usunięto trenera');
         this.refreshTrainersList();
       })
     }

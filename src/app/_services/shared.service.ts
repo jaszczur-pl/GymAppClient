@@ -18,8 +18,21 @@ export class SharedService {
     return this.http.put(this.APIUrl+'/Account/SetClientData', val)
   }
 
+  //ExtendedSchedule methods
   getExtendedScheduleList():Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/ExtendedSchedule');
+  }
+
+  getClientReservation(scheduleID:any):Observable<any>{
+    return this.http.get<any>(this.APIUrl+'/ExtendedSchedule/GetCustomerReservation/' + scheduleID);
+  }
+
+  addReservation(reservationModel:any){
+    return this.http.post(this.APIUrl+'/ExtendedSchedule/PostReservation',reservationModel);
+  }
+
+  removeReservation(scheduleID:any){
+    return this.http.delete(this.APIUrl+'/ExtendedSchedule/RemoveReservation/' + scheduleID);
   }
 
   //Classes
@@ -101,5 +114,17 @@ export class SharedService {
   deleteSchedule(id:number){
     return this.http.delete(this.APIUrl+'/Schedules/' + id)
   }
-  
+
+  //Reservations
+  getReservationList():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/Reservations');
+  }
+
+  getReservation(val:any):Observable<any>{
+    return this.http.get<any>(this.APIUrl+'/Reservations/',val);
+  }
+
+  deleteReservations(id:number){
+    return this.http.delete(this.APIUrl+'/Reservations/' + id)
+  }
 }

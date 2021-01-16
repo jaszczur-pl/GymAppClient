@@ -36,7 +36,8 @@ export class LoginTwoFactorComponent implements OnInit {
         this.router.navigate(['home']); */
       },
       err => {
-        this.errorMessage = err.error.message;
+        this.errorMessage = err.error.Message;
+        alert(this.errorMessage);
         this.isLoginFailed = true;
       }
     )

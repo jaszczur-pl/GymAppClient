@@ -29,7 +29,7 @@ export class ShowCustomersComponent implements OnInit {
   deleteClick(item:any){
     if(confirm('Czy jesteś pewien?')){
       this.service.deleteCustomer(item.ID).subscribe(data=>{
-        alert(data.toString());
+        alert('Pomyślnie usunięto klienta');
         this.refreshCustomersList();
       })
     }

@@ -32,6 +32,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TrainingsComponent } from './trainings/trainings.component';
 import { ScheduleModule, RecurrenceEditorModule, DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
 import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
+import { AddEditScheduleComponent } from './schedule/add-edit-schedule/add-edit-schedule.component';
+import { ReservationsComponent } from './reservations/reservations.component';
+import { ShowReservationsComponent } from './reservations/show-reservations/show-reservations.component';
+import { AddEditReservationsComponent } from './reservations/add-edit-reservations/add-edit-reservations.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +59,10 @@ import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
     ProfileComponent,
     LoginTwoFactorComponent,
     TrainingsComponent,
+    AddEditScheduleComponent,
+    ReservationsComponent,
+    ShowReservationsComponent,
+    AddEditReservationsComponent,
   ],
   imports: [
     BrowserModule,

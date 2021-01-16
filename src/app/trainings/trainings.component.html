@@ -1,3 +1,43 @@
-<ejs-schedule [views]='views' [eventSettings]='eventSettings'>
+<ejs-schedule #scheduleObj [views]='views' [eventSettings]='eventSettings' (popupOpen)="onPopupOpen($event)" (popupClose)="onPopupClose($event)">
+    <ng-template #editorTemplate let-data>
+        <form class="form-container" #f = "ngForm">
+        <table class="custom-event-editor" width="100%" cellpadding="5">
+            <tbody>
+                <tr>
+                    <td class="e-textlabel">Zajęcia</td>
+                    <td colspan="4">
+                        <input id="Subject" class="e-field e-input" type="text" value="" name="Subject" style="width: 100%" readonly/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="e-textlabel">Trener</td>
+                    <td colspan="4">
+                        <input id="TrainerFullName" class="e-field e-input" type="text" value="" name="TrainerFullName" style="width: 100%" readonly/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="e-textlabel">Czas rozpoczęcia</td>
+                        <td colspan="4">
+                        <input id="StartTime" class="e-field" type="text" name="StartTime" readonly/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="e-textlabel">Czas zakończenia</td>
+                    <td colspan="4">
+                        <input id="EndTime" class="e-field" type="text" name="EndTime" readonly/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="e-textlabel">Dostępna liczba miejsc</td>
+                    <td colspan="4">
+                        <input id="NumberOfAvailablePlaces" class="e-field e-input" type="text" value="" name="NumberOfAvailablePlaces" style="width: 100%" readonly/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button *ngIf="!isReserved" (click)="addReservation()" type="submit" class="btn btn-success float-right">Zapisz się</button>
+        <button *ngIf="isReserved" (click)="removeReservation()" type="submit" class="btn btn-success float-right">Usuń rezerwację</button>
+    </form>
+    </ng-template>
 
 </ejs-schedule>

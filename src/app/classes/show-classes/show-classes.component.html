@@ -28,6 +28,7 @@ data-backdrop="static" data-keyboard="false">
 <table class="table table-striped table-dark">
     <thead>
         <tr>
+            <th class="text-light">ID</th>
             <th class="text-light">Nazwa zajęć</th>
             <th class="text-light">Limit użytkowników</th>
             <th class="text-light">Opcje</th>
@@ -35,6 +36,7 @@ data-backdrop="static" data-keyboard="false">
     </thead>     
     <tbody>
         <tr *ngFor="let dataItem of ClassesList">
+            <td class="text-white">{{dataItem.ID}}</td>
             <td class="text-white">{{dataItem.Name}}</td>
             <td class="text-white">{{dataItem.UsersLimit}}</td>
             <td>

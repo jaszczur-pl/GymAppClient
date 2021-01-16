@@ -11,6 +11,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { LoginTwoFactorComponent } from './login-two-factor/login-two-factor.component';
 import { TrainingsComponent } from './trainings/trainings.component';
+import { ReservationsComponent } from './reservations/reservations.component';
 
 const routes: Routes = [
   {path:'classes',component:ClassesComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'customer',component:CustomerComponent},
   {path:'schedule',component:ScheduleComponent},
   {path:'trainings',component:TrainingsComponent},
+  {path:'reservations',component:ReservationsComponent},
   {path:'profile', component:ProfileComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SingupComponent},
@@ -29,6 +31,7 @@ const routes: Routes = [
   {path:'classes/profile', redirectTo:'profile', pathMatch: 'full'},
   {path:'customer/profile', redirectTo:'profile', pathMatch: 'full'},
   {path:'schedule/profile', redirectTo:'profile', pathMatch: 'full'},
+  {path:'reservations/profile', redirectTo:'profile', pathMatch: 'full'},
   {path:'trainings/profile', redirectTo:'profile', pathMatch: 'full'},
 ];
 

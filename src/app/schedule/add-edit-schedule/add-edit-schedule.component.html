@@ -1,0 +1,30 @@
+<div class="form-group row" style="width: 500px;">
+    <label class="col-sm-2 col-form-label" style="color: white;">ID zajęć</label>
+    <div class="col-sm-10" style="padding-bottom: 20px; padding-left: 60px;">
+        <input type="number" class="form-control" [(ngModel)]="ClassID"
+        placeholder="Wprowadź ID">
+    </div>
+    <label class="col-sm-2 col-form-label" style="color: white;">ID trenera</label>
+    <div class="col-sm-10" style="padding-bottom: 10px; padding-left: 60px;">
+        <input type="number" class="form-control" [(ngModel)]="TrainerID"
+        placeholder="Wprowadź ID">
+    </div>
+    <label class="col-sm-2 col-form-label" style="color: white;">Początek zajęć</label>
+    <div class="col-sm-10" style="padding-bottom: 10px; padding-left: 60px;">
+        <input type="datetime" class="form-control" [(ngModel)]="DateFrom"
+        placeholder="Wprowadź datę początkową">
+    </div>
+    <label class="col-sm-2 col-form-label" style="color: white;">Koniec zajęć</label>
+    <div class="col-sm-10" style="padding-bottom: 10px; padding-left: 60px;">
+        <input type="datetime" class="form-control" [(ngModel)]="DateTo"
+        placeholder="Wprowadź datę końcową">
+    </div>
+</div>
+
+<button (click)="addSchedule()" *ngIf="schedules.ID==0" class="btn btn-success">
+    Dodaj
+</button>
+
+<button (click)="updateSchedule()" *ngIf="schedules.ID!=0" class="btn btn-success">
+    Aktualizuj
+</button>

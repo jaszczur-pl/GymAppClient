@@ -37,7 +37,8 @@ export class SingupComponent implements OnInit {
         this.router.navigate(['login']);
       },
       err =>{
-        this.errorMessage = err.error.message;
+        this.errorMessage = err.error.Message;
+        alert(this.errorMessage);
         this.isSignUpFailed = true;
       }
     );

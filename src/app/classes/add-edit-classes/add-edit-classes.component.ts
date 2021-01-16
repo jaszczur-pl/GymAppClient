@@ -27,7 +27,7 @@ export class AddEditClassesComponent implements OnInit {
                UsersLimit:this.UsersLimit};
 
     this.service.addClass(val).subscribe(res=>
-      {alert(res.toString());});
+      {alert('Pomyślnie dodano zajęcia');});
   }
 
   updateClass(){
@@ -36,7 +36,7 @@ export class AddEditClassesComponent implements OnInit {
     UsersLimit:this.UsersLimit};
 
     this.service.updateClass(val.ID, val).subscribe(res=>
-      {alert(res.toString());});
+      {alert('Pomyślnie zaktualizowano zajęcia');});
   }
 }
 
