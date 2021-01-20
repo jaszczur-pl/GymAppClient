@@ -1,4 +1,4 @@
-<ejs-schedule #scheduleObj [views]='views' [eventSettings]='eventSettings' (popupOpen)="onPopupOpen($event)" (popupClose)="onPopupClose($event)">
+<ejs-schedule #scheduleObj [views]='views' [eventSettings]='eventSettings' startHour='07:00' endHour='21:00'  (popupOpen)="onPopupOpen($event)" (popupClose)="onPopupClose($event)">
     <ng-template #editorTemplate let-data>
         <form class="form-container" #f = "ngForm">
         <table class="custom-event-editor" width="100%" cellpadding="5">

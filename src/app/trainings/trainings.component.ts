@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {View, EventSettingsModel, PopupOpenEventArgs, PopupCloseEventArgs, ScheduleComponent, EJ2Instance} from '@syncfusion/ej2-angular-schedule';
+import {View, EventSettingsModel, PopupOpenEventArgs, ScheduleComponent, WorkHoursModel} from '@syncfusion/ej2-angular-schedule';
 import { SharedService } from '../_services/shared.service';
 import {L10n} from '@syncfusion/ej2-base';
 import { DateTimePicker } from '@syncfusion/ej2-calendars';
